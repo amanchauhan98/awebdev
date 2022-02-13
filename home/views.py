@@ -29,9 +29,9 @@ def index(request):
     }
 
     if request.method == 'POST':
-        name = request.POST.get('name', '')
-        email = request.POST.get('email', '')
-        message = request.POST.get('message', '')
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        message = request.POST.get('message')
         # print(name, email, message)
         ins = feedback(name=name, email=email, message=message)
         ins.save()
@@ -49,17 +49,17 @@ def about(request):
 
 def contact(request):
     if request.method == 'POST':
-        fname = request.POST.get('first-name','')
-        lname = request.POST.get('last-name','')
-        email = request.POST.get('email-address','')
-        password = request.POST.get('password','')
-        Rpassword = request.POST.get('password-text','')
-        website = request.POST.get('company-website','')
-        state = request.POST.get('state','')
-        address = request.POST.get('street-address','')
-        city =  request.POST.get('city','')
-        postalcode = request.POST.get('postal-code','')
-        file_upload = request.POST.get('file-upload','')
+        fname = request.POST.get('first-name')
+        lname = request.POST.get('last-name')
+        email = request.POST.get('email-address')
+        password = request.POST.get('password')
+        Rpassword = request.POST.get('password-text')
+        website = request.POST.get('company-website')
+        state = request.POST.get('state')
+        address = request.POST.get('street-address')
+        city =  request.POST.get('city')
+        postalcode = request.POST.get('postal-code')
+        file_upload = request.POST.get('file-upload')
         print(fname, lname,email, password, website, Rpassword, state,  address, city, postalcode)
 
         user = User.objects.create_user(fname, email, password)
@@ -89,8 +89,8 @@ def contact(request):
 
 def view_login(request):
     if request.method == 'POST':
-        username = request.POST.get('fname','')
-        password = request.POST.get('password','')
+        username = request.POST.get('fname')
+        password = request.POST.get('password')
         print(username, password)
         user = authenticate(username=username, password=password)
         if user is not None:

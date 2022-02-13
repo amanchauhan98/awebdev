@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{codes.title}} source code</title>
+</head>
+<body>
+  {% include "header.html" %}
+
+      <div class="bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 ..."></div>
+      <div class="bg-white-50 flex flex-col text-center w-full mb-20">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
+          <h2 class="text-3xl font-extrabold tracking-tight text-pink-500 sm:text-5xl">
+            <span class="block xl:inline bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-yellow-200"><u>{{codes.title}} </u></span>
+          </h2>
+         </div>
+       </div>   
+       <section class="text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto flex flex-wrap">
+          <div class="lg:w-2/3 mx-auto">
+            <div class="flex flex-wrap w-full bg-pink-400 py-32 px-100  relative mb-4 shadow-2xl" width = "1000" height="1000">
+              <ul class="actions special">
+              <li><img alt="pizza bill" class="w-full occupy h-full object-center block opacity-100 absolute inset-0 w3-border  w3-padding" src= {{codes.image.url}} ></li>
+              </ul>
+            </div> 
+            </div>
+            
+          </div>
+        </div>
+      </section>  
+      <div class="h-full flex flex-col py-6 bg-pink-10 shadow-2xl lg:items-center lg:justify-between">
+        <!-- <div class="px-4 sm:px-6"> -->
+          <h2 class="text-3xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-yellow-200" id="slide-over-title">
+            <u>{{codes.title}}</u>
+          </h2>
+        </div>
+        <div class="mt-6 relative flex-1 px-4 sm:px-6 text-pink-800 bg-grey-200">
+          <pre>
+            <code>
+              <p class="shadow-2xl">
+               
+                {{codes.code|safe}}
+
+              </p>
+                
+            </code>
+          </pre>
+          <div class="absolute inset-0 px-4 sm:px-6">
+            <div class="h-full border-2 border-dashed border-pink-800" aria-hidden="true"></div>
+          </div>
+          
+        </div>
+      </div>
+
+      {% include "footer.html" %}
+
+    </body>
+    </html> 
+  

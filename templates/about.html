@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A-web developer about  page</title>
+</head>
+<body>
+  {% include "header.html" %}
+
+      <div class="bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 ..."></div>
+      <!-- This example requires Tailwind CSS v2.0+ -->
+<div class="bg-pink-50">
+  <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
+    <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+      <span class="block">Are you ready?</span>
+      <span class="block text-pink-400">To get your Business online with a Website</span>
+    </h2>
+    <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
+      <div class="inline-flex rounded-md shadow">
+        <a href="/view_login" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-pink-600 hover:bg-pink-700">
+          Ofcourse
+        </a>
+      </div>
+      <div class="ml-3 inline-flex rounded-md shadow">
+        <a href="/" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-pink-600 bg-white hover:bg-pink-50">
+          Not Now
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<section class="text-gray-600 body-font">
+  <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
+    <img class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded" alt="hero" src= {% static 'images/aman.jpg' %} >
+    <div class="text-center lg:w-2/3 w-full">
+      <h1 class="title-font font-semibold text-3xl font-medium bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-yellow-300">Here is Aman Chauhan</h1>. 
+      <p class="mb-8 leading-relaxed text-pink-500"> Hello Visitor, MY name is Aman Chauhan and I am a Developer of this Website. I am studying BCA Course from Aravali Collage of Engineering and Management. I also have the Knowledge about C programming Language and Python Programming Language. I also have Knowledge about Microsoft office and Basic Computer knowledge. My totally intrest in Web development, Recently I am also learing Back-End Web Development. I totally use new technology for Web Development is Tailwind CSS.</p>
+      <div class="flex justify-center">
+        <button class="inline-flex text-white bg-pink-400 border-0 py-2 px-6 focus:outline-none hover:bg-pink-600 rounded text-lg"><a href="/">Know More</a></button>
+        <button class="ml-4 inline-flex text-pink-600 bg-pink-100 border-0 py-2 px-6 focus:outline-none hover:bg-pink-200 rounded text-lg">its Ok</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<h1 class="text-4xl text-center  tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+  <span class="block xl:inline bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-yellow-200">A-Web Developer</span>
+  <span class="block text-yellow-200 xl:inline">Gallery</span>
+</h1>
+
+<section class="text-gray-600 body-font">
+  <div class="container px-5 py-24 mx-auto flex flex-wrap">
+    <div class="flex w-full mb-20 flex-wrap">
+      <h1 class="sm:text-3xl text-2xl font-medium title-font text-pink-600 lg:w-1/3 lg:mb-0 mb-4">Some Of Our Best Project Photos</h1>
+      <p class="lg:pl-6 lg:w-2/3 mx-auto leading-relaxed text-base text-grey-900">There are some of our best Poject Photos feature in our Website. Photos are related to <a class = "text-pink-500 hover: text-pink-600">Python Programming Language</a> , <a class = "text-pink-500">C Programming Language</a> , <a class = "text-pink-500">Web Development</a> etc. I hope You like as well....</p>
+    </div>
+    <div class="flex flex-wrap md:-m-2 -m-1">
+      <div class="flex flex-wrap w-1/2">
+        <div class="md:p-2 p-1 w-1/2">
+          <img alt="gallery" class="w-full object-cover h-full object-center block" src= {% static 'images/voter.jpg' %} >
+        </div>
+        <div class="md:p-2 p-1 w-1/2">
+          <img alt="gallery" class="w-full object-cover h-full object-center block" src= {% static 'images/pizza.jpg' %} >
+        </div>
+        <div class="md:p-2 p-1 w-full">
+          <img alt="gallery" class="w-full h-full object-cover object-center block" src= {% static 'images/blog.jpg' %} >
+        </div>
+      </div>
+      <div class="flex flex-wrap w-1/2">
+        <div class="md:p-2 p-1 w-full">
+          <img alt="gallery" class="w-full h-full object-cover object-center block" src= {% static 'c0c416b5-f9cc-415e-82ea-fc45ef929922.jpg' %} >
+        </div>
+        <div class="md:p-2 p-1 w-1/2">
+          <img alt="gallery" class="w-full object-cover h-full object-center block" src= {% static 'images/birthday.jpg' %} >
+        </div>
+        <div class="md:p-2 p-1 w-1/2">
+          <img alt="gallery" class="w-full object-cover h-full object-center block" src= {% static 'pic 1.jpg' %} >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include "footer.html" %}
+
+</body>
+</html>

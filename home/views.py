@@ -48,7 +48,7 @@ def about(request):
 
 
 def contact(request):
-    if request.method == 'POST':
+    if request.method == 'post':
         fname = request.POST.get('first-name')
         lname = request.POST.get('last-name')
         email = request.POST.get('email-address')

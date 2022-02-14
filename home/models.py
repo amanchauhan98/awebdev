@@ -12,15 +12,15 @@ class feedback(models.Model):
         return self.name
 
 class userdata(models.Model):
-    fname = models.CharField(max_length=50, default='')
-    lname = models.CharField(max_length=50, default='')
+    fname = models.CharField(max_length=50)
+    lname = models.CharField(max_length=50)
     email = models.EmailField(max_length=100)
     password = models.CharField(max_length=20)
     Rpassword = models.CharField(max_length=20)
-    website = models.URLField(max_length=100)
-    state = models.CharField(max_length=20, default='')
-    address = models.CharField(max_length=100, default='')
-    city = models.CharField(max_length=30, default='')
+    website = models.URLField(max_length=100, default='')
+    state = models.CharField(max_length=20)
+    address = models.CharField(max_length=100)
+    city = models.CharField(max_length=30)
     postalcode = models.IntegerField()
     file_upload = models.FileField(upload_to='upload')
 

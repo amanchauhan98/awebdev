@@ -53,7 +53,7 @@ def contact(request):
         lname = request.POST.get('last-name')
         email = request.POST.get('email-address')
         password = request.POST.get('password')
-        Rpassword = request.POST.get('password-text')
+        Rpassword = request.POST.get('password_text')
         website = request.POST.get('company-website')
         state = request.POST.get('state')
         address = request.POST.get('street-address')

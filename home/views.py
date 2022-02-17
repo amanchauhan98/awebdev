@@ -48,7 +48,7 @@ def about(request):
 
 
 def contact(request):
-    if request.method == 'post':
+    if request.method == 'POST':
         fname = request.POST.get('first-name')
         lname = request.POST.get('last-name')
         email = request.POST.get('email-address')
@@ -61,14 +61,16 @@ def contact(request):
         postalcode = request.POST.get('postal-code')
         file_upload = request.POST.get('file-upload')
         print(fname, lname,email, password, website, Rpassword, state,  address, city, postalcode)
+        
+        ins = userdata(fname=fname, lname=lname, email=email, password=password, Rpassword=Rpassword, website=website, state=state, address=address, city=city, postalcode=postalcode, file_upload = file_upload)
+        ins.save()
 
         user = User.objects.create_user(fname, email, password)
         user.first_name = fname
         user.last_name = lname
         user.save()
 
-        ins = userdata(fname=fname, lname=lname, email=email, password=password, Rpassword=Rpassword, website=website, state=state, address=address, city=city, postalcode=postalcode, file_upload = file_upload)
-        ins.save()
+        
         send_mail(
         f'Welcome {fname} in Our A-Web Developer Community',
         f'This is a Welcome Mail MR. MS {fname}. In Our Community You are free to do anything.',

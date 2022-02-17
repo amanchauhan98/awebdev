@@ -64,7 +64,7 @@ class websites(models.Model):
 
 class code_desc(models.Model):
     title = models.CharField(max_length=40)
-    image = models.ImageField(upload_to = "code")
+    image = models.ImageField(upload_to = "pycode")
     code = HTMLField()
     new_slug = AutoSlugField(populate_from = 'title', unique = True, null = True, default = None)
 
@@ -76,7 +76,7 @@ class code_desc(models.Model):
 # for c code desc
 class c_code(models.Model):
     title = models.CharField(max_length = 50)
-    image = models.ImageField(upload_to = "code")
+    image = models.ImageField(upload_to = "CCcode")
     code = HTMLField()
     new_slug = AutoSlugField(populate_from = 'title', unique = True, null = True, default = None)
 

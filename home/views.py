@@ -49,17 +49,17 @@ def about(request):
 
 def contact(request):
     if request.method == 'POST':
-        fname = request.POST.get('first-name')
-        lname = request.POST.get('last-name')
-        email = request.POST.get('email-address')
-        password = request.POST.get('password')
-        Rpassword = request.POST.get('password_text')
-        website = request.POST.get('company-website','')
-        state = request.POST.get('state')
-        address = request.POST.get('street-address')
-        city =  request.POST.get('city')
-        postalcode = request.POST.get('postal-code')
-        file_upload = request.POST.get('file-upload','')
+        fname = request.POST['first-name']
+        lname = request.POST['last-name']
+        email = request.POST['email-address']
+        password = request.POST['password']
+        Rpassword = request.POST['password_text']
+        website = request.POST['company-website']
+        state = request.POST['state']
+        address = request.POST['street-address']
+        city =  request.POST['city']
+        postalcode = request.POST['postal-code']
+        file_upload = request.POST['file-upload']
         print(fname, lname,email, password, website, Rpassword, state,  address, city, postalcode)
         
         ins = userdata(fname=fname, lname=lname, email=email, password=password, Rpassword=Rpassword, website=website, state=state, address=address, city=city, postalcode=postalcode, file_upload = file_upload)
@@ -77,8 +77,10 @@ def contact(request):
         'avinashthakurchauhan07@gmail.com',
         [f'{email}'],
         fail_silently= False
+        )
+        return redirect('/')
 
-    ) 
+
 
 
 
